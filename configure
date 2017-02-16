@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+mkdir -p src
+cd src
+
+git clone https://github.com/topherzee/shareable-component
+git clone https://github.com/robertkowalski/mgnl-custom

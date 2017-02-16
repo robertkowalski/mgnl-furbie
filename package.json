@@ -1,0 +1,20 @@
+{
+  "name": "mgnl-furbie",
+  "version": "1.0.0",
+  "description": "Building project",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertkowalski/mgnl-furbie.git"
+  },
+  "keywords": [
+    "magnolia",
+    "mgnl",
+    "mgnolia-light-module"
+  ],
+  "author": "Robert Kowalski <rok@kowalski.gd>",
+  "license": "MIT"
+}

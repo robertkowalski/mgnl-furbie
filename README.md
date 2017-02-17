@@ -2,7 +2,7 @@
 
 ## Setup
 
-Run `./bootstrap` to pull in dependencies and compile dependencies.
+Run `./configure` to pull in dependencies and compile dependencies.
 
 Main gulp task merges the folder structure of the light-modules.
 It will also concatenate the **pre-compiled** CSS / JS into one

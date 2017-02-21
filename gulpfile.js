@@ -33,13 +33,13 @@ gulp.task('decorations', [ 'clean' ], () => {
 
 gulp.task('js', [ 'clean' ], () => {
   return gulp.src('src/**/webresources/**/*.js')
-    .pipe(concat(PROJECT_NAME + '.js'))
+    .pipe(concat('bundle.js'))
     .pipe(gulp.dest('dist/'+ PROJECT_NAME))
 })
 
 gulp.task('css', [ 'clean' ], () => {
   return gulp.src('src/**/webresources/**/*.css')
-    .pipe(concat(PROJECT_NAME + '.css'))
+    .pipe(concat('bundle.css'))
     .pipe(gulp.dest('dist/'+ PROJECT_NAME))
 })
 

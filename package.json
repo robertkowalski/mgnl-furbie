@@ -2,16 +2,14 @@
   "name": "mgnl-furbie",
   "version": "1.0.0",
   "description": "Building project",
-  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "./bootstrap",
-    "build": "gulp",
-    "clean": "rm -rf target"
+    "build": "npm run clean && npm i --production && gulp",
+    "clean": "rm -rf src dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robertkowalski/mgnl-furbie.git"
+    "url": "https://github.com/robertkowalski/mgnl-furbie.git"
   },
   "keywords": [
     "magnolia",
@@ -22,12 +20,11 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-flatten": "^0.3.1"
   },
   "dependencies": {
-    "mgnl-custom": "^1.0.0",
-    "robertkowalski-shareable-component": "0.0.2"
+    "mgnl-calculator": "0.0.1",
+    "shareable-component": "^1.0.0"
   }
 }

@@ -2,52 +2,46 @@ const path = require('path')
 
 const gulp = require('gulp')
 const flatten = require('gulp-flatten')
-const clean = require('gulp-clean')
 const concat = require('gulp-concat')
 
 const pkg = require('./package.json')
 const PROJECT_NAME = pkg.name
 const DEPS = Object.keys(pkg.dependencies)
 
-gulp.task('dialogs', [ 'clean', 'deps' ], () => {
+gulp.task('dialogs', [ 'deps' ], () => {
   return gulp
     .src('src/**/dialogs/**')
     .pipe(gulp.dest('dist/'))
 })
 
-gulp.task('templates', [ 'clean', 'deps' ], () => {
+gulp.task('templates', [ 'deps' ], () => {
   return gulp
     .src(['src/**/templates/**'])
     .pipe(gulp.dest('dist/'))
 })
 
-gulp.task('i18n', [ 'clean', 'deps' ], () => {
+gulp.task('i18n', [ 'deps' ], () => {
   return gulp
     .src(['src/**/i18n/*'])
     .pipe(gulp.dest('dist/'))
 })
 
-gulp.task('decorations', [ 'clean', 'deps' ], () => {
+gulp.task('decorations', [ 'deps' ], () => {
   return gulp
     .src(['src/**/decorations/**'])
     .pipe(gulp.dest('dist/'))
 })
 
-gulp.task('js', [ 'clean', 'deps' ], () => {
+gulp.task('js', [ 'deps' ], () => {
   return gulp.src('src/**/webresources/**/*.js')
     .pipe(concat('bundle.js'))
-    .pipe(gulp.dest('dist/'+ PROJECT_NAME))
+    .pipe(gulp.dest('dist/'+ PROJECT_NAME + '/webresources'))
 })
 
-gulp.task('css', [ 'clean', 'deps' ], () => {
+gulp.task('css', [ 'deps' ], () => {
   return gulp.src('src/**/webresources/**/*.css')
     .pipe(concat('bundle.css'))
-    .pipe(gulp.dest('dist/'+ PROJECT_NAME))
-})
-
-gulp.task('clean', () => {
-  return gulp.src('dist')
-    .pipe(clean())
+    .pipe(gulp.dest('dist/'+ PROJECT_NAME + '/webresources'))
 })
 
 gulp.task('deps', () => {
@@ -59,4 +53,4 @@ gulp.task('deps', () => {
     .pipe(gulp.dest('src'))
 })
 
-gulp.task('default', ['templates', 'dialogs', 'i18n', 'decorations', 'js'])
+gulp.task('default', ['templates', 'dialogs', 'i18n', 'decorations', 'js', 'css'])

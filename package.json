@@ -20,8 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-flatten": "^0.3.1"
+    "gulp-concat": "^2.6.1"
   },
   "dependencies": {
     "mgnl-calculator": "0.0.1",

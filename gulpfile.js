@@ -1,7 +1,6 @@
 const path = require('path')
 
 const gulp = require('gulp')
-const flatten = require('gulp-flatten')
 const concat = require('gulp-concat')
 
 const pkg = require('./package.json')

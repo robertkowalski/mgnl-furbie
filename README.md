@@ -1,4 +1,4 @@
-# furbie
+# example-light-project-gulp
 
 ## Setup
 
